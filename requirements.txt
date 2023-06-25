@@ -4,3 +4,4 @@ python-dotenv
 streamlit-chat
 tiktoken
 pinecone-client
+chainlit

@@ -43,7 +43,7 @@ vectorstore = Pinecone(
 )
 
 # initialize LLM object
-llm = AzureChatOpenAI(deployment_name="gpt-35-turbo")
+llm = AzureChatOpenAI(deployment_name="gpt-35-turbo", temperature=0)
 
 # initialize vectorstore retriever object
 timekeeping_policy = RetrievalQA.from_chain_type(
@@ -119,15 +119,15 @@ def get_response(user_input):
 print(agent.agent.llm_chain.prompt.template)
 
 # %%
-#get_response('What is my name and employee id?')
+get_response('What is my name and employee id?')
 
 # %%
-#get_response('Are employees on probation allowed to have vacation leaves?')
+get_response('Are employees on probation allowed to have vacation leaves?')
 
 # %%
-#get_response("How many vacation leaves do I have left and what is the policy on unused VLs?")
+get_response("How many vacation leaves do I have left and what is the policy on unused VLs?")
 
 # %%
-#get_response("How much will I be paid if I encash my unused VLs?")
+get_response("How much will I be paid if I encash my unused VLs?")
 
 # %%
